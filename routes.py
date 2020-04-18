@@ -9,6 +9,12 @@ images = Blueprint('images', __name__)
 
 @images.route('/')
 @cross_origin()
+def welcome():
+    return "Hello There"
+
+
+@images.route('/images/')
+@cross_origin()
 def get_cities():
     temp = Cities.query.all()
     result = cities_schema.dumps(temp)
