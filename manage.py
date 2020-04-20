@@ -1,10 +1,14 @@
+# from flask import Flask
+# from flask_sqlalchemy import SQLAlchemy
 from flask_script import Manager
 from flask_migrate import Migrate, MigrateCommand
-
 from app import app, db
+from models import Cities
+import os
 
 
-app.config.from_object('config.DevConfig')
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL')
+migrate = Migrate(app, db)
 
 migrate = Migrate(app, db)
 manager = Manager(app)
