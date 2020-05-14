@@ -11,7 +11,7 @@ def Setup():
     # print('file name: '+str(file_name))
     for file in file_name:
         city_name = (file.replace('.jpg', '')).replace('_', ' ')
-        city = Cities(name=city_name, url='static/images/'+file) # noqa
+        city = Cities(name=city_name, url='images/'+file) # noqa
         if db.session.query(Cities).filter(Cities.name == city_name).count() == 0: # noqa
             db.session.add(city)
 

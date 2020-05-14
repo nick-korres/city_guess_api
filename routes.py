@@ -4,7 +4,7 @@ from models import Cities, cities_schema
 import os
 from flask import Blueprint, Response  # , request
 
-images = Blueprint('images', __name__)
+images = Blueprint('images', __name__,static_url_path='/static')
 
 
 @images.route('/')
@@ -23,6 +23,8 @@ def get_cities():
 
 @images.route('/images/<name>')
 def show_image(name):
+    
     correct_path = images.static_url_path+'/images/'
     correct_path = os.path.abspath(os.path.dirname(__file__))+correct_path
+    print(correct_path)
     return send_from_directory(correct_path, filename=name)
