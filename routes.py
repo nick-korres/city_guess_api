@@ -3,6 +3,7 @@ from flask_cors import cross_origin
 from models import Cities, cities_schema
 import os
 from flask import Blueprint, Response  # , request
+from sqlalchemy import func
 
 images = Blueprint('images', __name__,static_url_path='/static')
 
@@ -13,15 +14,16 @@ def welcome():
     return "Hello There"
 
 
-@images.route('/images/' , methods=['GET'])
+@images.route('/images/<numOfCities>' , methods=['GET'])
 @cross_origin()
-def get_cities():
-    temp = Cities.query.all()
+def get_cities(numOfCities):
+    temp = Cities.query.order_by(func.random()).limit(numOfCities).all()
     result = cities_schema.dumps(temp)
+    # print(result)
     return Response(result, 200)
 
 
-@images.route('/images/<name>', methods=['GET'])
+@images.route('/image/<name>', methods=['GET'])
 def show_image(name):
     
     correct_path = images.static_url_path+'/images/'
