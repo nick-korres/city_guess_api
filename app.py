@@ -20,6 +20,6 @@ db = SQLAlchemy(app)
 from routes import images  # To avoid circular imports
 app.register_blueprint(images)
 from dbSetup import Setup
-Setup()
+# Setup()
 if __name__ == '__main__':
     app.run()
