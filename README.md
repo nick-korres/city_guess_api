@@ -9,7 +9,7 @@ There are 2 routes
       
   * https://city-guess-api.herokuapp.com/image/<name>
   
-    Where a GET request like https://city-guess-api.herokuapp.com/image/Paris will return the image of the city of Paris
+    Where a GET request like https://city-guess-api.herokuapp.com/image/Paris.jpg will return the image of the city of Paris
 
 # Installation
   Assuming you have python 3+ installed :
