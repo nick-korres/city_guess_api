@@ -34,7 +34,7 @@ There are 2 routes
   * To create the tables in the database :
   ```
   flask shell
-  from app.py import Setup
+  from app import Setup
   Setup()
   exit()
   ```
