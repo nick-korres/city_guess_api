@@ -8,7 +8,6 @@ def Setup():
     db.create_all()
     db.session.commit()
     file_name = os.listdir(os.path.dirname(__file__)+'/static/images/')
-    # print('file name: '+str(file_name))
     for file in file_name:
         city_name = (file.replace('.jpg', '')).replace('_', ' ')
         city = Cities(name=city_name, url='image/'+file) # noqa
