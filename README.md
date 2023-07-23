@@ -3,13 +3,13 @@
 This is the Api for my City Guess web app whose code is ![here](https://github.com/nick-korres/city_guess_app).
 
 There are 2 routes 
-  * https://city-guess-api.herokuapp.com/images/<numOfCities>
+  * [https://city-guess-api-nick-korres.vercel.app/](https://city-guess-api-nick-korres.vercel.app/)images/<numOfCities>
       
-      Where a GET request like https://city-guess-api.herokuapp.com/images/10 will return 10 random city JSON objects containing the id,name, of each city.
+      Where a GET request like [https://city-guess-api-nick-korres.vercel.app/](https://city-guess-api-nick-korres.vercel.app/)images/10 will return 10 random city JSON objects containing the id,name, of each city.
       
-  * https://city-guess-api.herokuapp.com/image/<name>
+  * [https://city-guess-api-nick-korres.vercel.app/](https://city-guess-api-nick-korres.vercel.app/)image/<name>
   
-    Where a GET request like https://city-guess-api.herokuapp.com/image/Paris.jpg will return the image of the city of Paris
+    Where a GET request like [https://city-guess-api-nick-korres.vercel.app/](https://city-guess-api-nick-korres.vercel.app/)image/Paris.jpg will return the image of the city of Paris
 
 # Installation
   Assuming you have python 3+ installed :
